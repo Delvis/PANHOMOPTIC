@@ -1,3 +1,5 @@
+source("prepare_data.R")
+
 # Code for Figure 1:
 
 ggplot(data = HomoPanDivergences, aes(ESTIMATION, mean = u_mean, sdx = sdx, bw = bw, n_obs = n_obs)) + 
