@@ -14,6 +14,9 @@ HomoPanDivergences$date <- as.yearmon(
 
 HomoPanDivergences <- HomoPanDivergences[-which(is.na(HomoPanDivergences$ESTIMATION)),]
 
+lateMiocene_starts <- 11.63
+lateMiocene_ends <- 5.33
+
 FAD_A <- 4.4 # Ar. ramidus or Au. anamensis have LAD = 4.4 and FAD = 4.2, respectively
 FAD_B <- 6.2 # Orrorin and Kadabba FADs, are respectively 6.1 and 6.3 (if we accept the Gona's material as Ar. kadabba)
 FAD_C <- 7.3 # Sahelanthropus tchadensis, 7.34-7.1 Ma (Lebatard et al. 2010)
@@ -28,11 +31,11 @@ ggyaxis <- expression(paste(italic("Pan/Homo"), " divergence estimates (Ma)"))
 bw <- 0.25 # binwidth
 ggxaxis <- expression(paste(italic("Pan/Homo"), " divergence (Ma); binwidth = 0.25 Ma"))
 
-HomoPanDivergences$Type <- HomoPanDivergences$Material # Quick change for legend name
+HomoPanDivergences$Type <- as.factor(HomoPanDivergences$Material) # Quick change for legend name
 
-# Careful, order is data-dependent, if you added entries to the database, you might need to edit the following lines:
+# CAREFUL, order is data-dependent, if you added entries to the database, you might need to edit the following lines:
 
-levels(HomoPanDivergences$Type) <- c("others", "others", "others", "genome", "others", "mtDNA", "mtDNA",
+levels(HomoPanDivergences$Type) <- c("others", "others", "genome", "others", "mtDNA", "mtDNA",
                                      "mtDNA", "others", "others", "integrative", "others")
 
 # Regression filtered by genomic divergence studies
@@ -49,6 +52,14 @@ filteredReg <- HomoPanDivergences[which(!superFilter),]
 
 
 ######################
+
+# FIGURE 1 PRE-PROCESSING
+
+bw <- 0.5 # binwidth
+n_obs <- sum(!is.na(HomoPanDivergences$ESTIMATION)) # number of estimates
+sdx <- sd(HomoPanDivergences$ESTIMATION)
+u_mean <- mean(HomoPanDivergences$ESTIMATION)
+ybreaks = seq(0, 30, by = 5) 
 
 # FIGURE 2 PRE-PROCESSING
 
