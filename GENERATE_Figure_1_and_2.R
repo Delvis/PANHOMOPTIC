@@ -7,11 +7,9 @@ ggplot(data = HomoPanDivergences,
   geom_histogram(breaks = seq(0, 15, by = bw), 
                  fill = "#2c3e50",
                  alpha = 0.75) + 
-  stat_function(
-    fun = function(x) dnorm(x, mean = u_mean, sd = sdx) * n_obs * bw,
-    size = 1) +
+  stat_function(fun = dnorm_fun, size = 1) +
   labs(x = ggxaxis, y = "# published estimates") +
-  scale_x_continuous(breaks = seq(1, 15, by = 1), limits = c(1.2,14)) +
+  scale_x_continuous(breaks = seq(1, 15, by = 1), limits = c(1.2, 14)) +
   theme_minimal() +
   geom_vline(xintercept = FAD_A, col = "#e74c3c", linetype = "dashed") +
   geom_vline(xintercept = FAD_B, col = "#e67e22", linetype = "dashed") +
@@ -20,7 +18,10 @@ ggplot(data = HomoPanDivergences,
 # SAVE Figure 1:
 
 ggsave("Figure_1.tiff", last_plot(), width = 5, height = 2, dpi = "retina",
-       device = "tiff", type = "cairo")
+       bg = 'white', device = grDevices::tiff, type = 'cairo')
+# I had to force grDevices and Cairo because the new ragg creates very weird white lines between columns artifact.
+
+
 
 # Code for Figure 2:
 
@@ -44,5 +45,5 @@ ggplot(boxdf, aes(x = Filtered, y = ESTIMATION, fill = Filtered)) +
 # SAVE Figure 2:
 
 ggsave("Figure_2.tiff", last_plot(), width = 6.6, height = 3.3, dpi = "retina",
-       device = "tiff", type = "cairo")
+       device = "tiff", bg = 'white')
 

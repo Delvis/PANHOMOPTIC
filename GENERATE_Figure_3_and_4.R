@@ -8,7 +8,6 @@ ggplot(aes(x = date, y = ESTIMATION), data = HomoPanDivergences) +
   annotate("rect", xmin = -Inf, xmax = Inf, ymin = 2.8, ymax = FAD_A, fill = "#e74c3c", alpha = .6) +
   annotate("rect", xmin = -Inf, xmax = Inf, ymin = FAD_A, ymax = FAD_B, fill = "#e67e22", alpha = .6) +
   annotate("rect", xmin = -Inf, xmax = Inf, ymin = FAD_B, ymax = FAD_C, fill = "#f1c40f", alpha = .5) +
-  geom_errorbar(aes(ymin = Min, ymax = Max), width = 0.75, linetype = "dotted", alpha = 0.8) + 
   geom_smooth(data = sahelReg, aes(x = date, y = ESTIMATION), fill = "#9b59b6", col = "#9b59b6", method = "lm", size = 1.2) +
   stat_smooth(method = "lm", formula = y ~ poly(x, 2), size = 1, col = "black", alpha = 0.2) +
   geom_hline(yintercept = 2.8, col = "#e74c3c", size = 1.2) +
@@ -30,6 +29,7 @@ ggplot(aes(x = date, y = ESTIMATION), data = HomoPanDivergences) +
   xlab("Publication date") + ylab(ggyaxis) +
   scale_x_continuous(breaks = round(seq(1965, 2025, by = 5),1), limits = c(1967, 2027)) +
   scale_y_continuous(breaks = round(seq(0, 15, by = 1))) +
+  geom_errorbar(aes(ymin = Min, ymax = Max), width = 0.75, linetype = "dotted", alpha = 0.8) + 
   geom_point(size = 2) +
   theme_minimal() +
   # ggtitle("Molecular clock estimations for the split of the Pan/Homo lineage") +
@@ -58,7 +58,7 @@ ggplot(aes(x = date, y = ESTIMATION), data = HomoPanDivergences) +
 # SAVE Figure 3
 
 ggsave("Figure_3.tiff", last_plot(), width = 12, height = 7,
-       scale = 1.2, dpi = "retina", device = "tiff", type = "cairo")
+       scale = 1.2, dpi = "retina", device = "tiff", bg = 'white')
 
 ###############
 
@@ -68,7 +68,6 @@ ggplot(aes(x = date, y = ESTIMATION), data = HomoPanDivergences) +
   annotate("rect", xmin = 1994, xmax = Inf, ymin = -Inf, ymax = FAD_A, fill = "#e74c3c", alpha = .6) +
   annotate("rect", xmin = 2001, xmax = Inf, ymin = FAD_A, ymax = FAD_B, fill = "#e67e22", alpha = .6) +
   annotate("rect", xmin = 2002.583, xmax = Inf, ymin = FAD_B, ymax = FAD_C, fill = "#f1c40f", alpha = .5) +
-  geom_errorbar(aes(ymin = Min, ymax = Max), width = 0.5, linetype = "dotted", alpha = 0.5) + 
   geom_hline(yintercept = FAD_A, col = "#e74c3c", size = 1.2, linetype = "dashed") +
   geom_hline(yintercept = 5.33, col = "black", size = 1, linetype = "dotted") +
   geom_hline(yintercept = FAD_B, col = "#e67e22", size = 1.2, linetype = "dashed") +
@@ -83,6 +82,7 @@ ggplot(aes(x = date, y = ESTIMATION), data = HomoPanDivergences) +
   scale_y_continuous(breaks = round(seq(0, 15, by = 1))) +
   geom_smooth(data = filteredReg, aes(x = date, y = ESTIMATION), method = "lm", formula = y ~ poly(x, 2), size = 1, col = "black", alpha = 0.2) +
   geom_smooth(data = genomeReg, aes(x = date, y = ESTIMATION), fill = "#2ecc71", col = "#2ecc71", method = "lm", size = 1.2) +
+  geom_errorbar(aes(ymin = Min, ymax = Max), width = 0.5, linetype = "dotted", alpha = 0.5) + 
   geom_point(size = 3, aes(shape = Type, color = Type)) +
   scale_color_manual(values = c("#2c3e50", "#27ae60", "#3498db", "black")) +
   scale_shape_manual(values = c(16,17,15,25)) +
@@ -103,4 +103,4 @@ ggplot(aes(x = date, y = ESTIMATION), data = HomoPanDivergences) +
 # SAVE Figure 4
 
 ggsave("Figure_4.tiff", last_plot(), width = 12, height = 7,
-       scale = 1.2, dpi = "retina", device = "tiff", type = "cairo")
+       scale = 1.2, dpi = "retina", device = "tiff", bg = 'white')

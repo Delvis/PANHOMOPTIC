@@ -21,6 +21,12 @@ FAD_A <- 4.4 # Ar. ramidus or Au. anamensis have LAD = 4.4 and FAD = 4.2, respec
 FAD_B <- 6.2 # Orrorin and Kadabba FADs, are respectively 6.1 and 6.3 (if we accept the Gona's material as Ar. kadabba)
 FAD_C <- 7.3 # Sahelanthropus tchadensis, 7.34-7.1 Ma (Lebatard et al. 2010)
 
+# 3 SubSets
+
+HomoPanDivergences_A <- HomoPanDivergences[HomoPanDivergences$ESTIMATION > FAD_A,]
+HomoPanDivergences_B <- HomoPanDivergences[HomoPanDivergences$ESTIMATION > FAD_B,]
+HomoPanDivergences_C <- HomoPanDivergences[HomoPanDivergences$ESTIMATION > FAD_C,]
+
 # Regression filtered by Sahelanthropus
 
 sahelReg <- HomoPanDivergences[HomoPanDivergences$date > 2002.5,] # Date of publication
@@ -41,13 +47,13 @@ levels(HomoPanDivergences$Type) <- c("others", "others", "genome", "others", "mt
 # Regression filtered by genomic divergence studies
 genomeReg <- HomoPanDivergences[HomoPanDivergences$Type == 'genome',] # only genome studies
 
-# Prepare dataset to be filtered by both date of publication and associated threhsolds:
+# Prepare dataset to be filtered by both date of publication and associated thresholds:
 superFilter <- HomoPanDivergences$date < 1980 | 
   (HomoPanDivergences$date > 1994 & HomoPanDivergences$ESTIMATION < FAD_A) | 
   (HomoPanDivergences$date > 2001 & HomoPanDivergences$ESTIMATION < FAD_B) | 
   (HomoPanDivergences$date > 2002.583 & HomoPanDivergences$ESTIMATION < FAD_C)
 
-# Regression filtered by threhsolds-by-date-of-publication *and 1980s onwards*
+# Regression filtered by thresholds-by-date-of-publication *and 1980s onwards*
 filteredReg <- HomoPanDivergences[which(!superFilter),]
 
 
@@ -55,11 +61,12 @@ filteredReg <- HomoPanDivergences[which(!superFilter),]
 
 # FIGURE 1 PRE-PROCESSING
 
-bw <- 0.5 # binwidth
 n_obs <- sum(!is.na(HomoPanDivergences$ESTIMATION)) # number of estimates
 sdx <- sd(HomoPanDivergences$ESTIMATION)
 u_mean <- mean(HomoPanDivergences$ESTIMATION)
 ybreaks = seq(0, 30, by = 5) 
+dnorm_fun <- function(x) dnorm(x, mean = u_mean, sd = sdx) * n_obs * bw
+
 
 # FIGURE 2 PRE-PROCESSING
 
