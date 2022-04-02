@@ -28,22 +28,22 @@ The last analysis in present in the main text, and can be redundantly performed 
 
 ~
 
-![Figure 1. Histogram of all molecular estimates showing the three fossil thresholds as dashed vertical lines. Note that instead of following a normal distribution, there is an unexpected gap at 9–9.5 Ma, and studies seem to cluster in excess around important fossil discoveries.](Figures/Figure_1.tiff)
+![Figure 1. Histogram of all molecular estimates showing the three fossil thresholds as dashed vertical lines. Note that instead of following a normal distribution, there is an unexpected gap at 9–9.5 Ma, and studies seem to cluster in excess around important fossil discoveries.](Figures/Figure_1.png)
 **Figure 1.** Histogram of all molecular estimates showing the three fossil thresholds as dashed vertical lines. Note that instead of following a normal distribution, there is an unexpected gap at 9–9.5 Ma, and studies seem to cluster in excess around important fossil discoveries.
 
-![Figure 2. Interquartile range boxplots for divergence estimates filtered by different fossil thresholds. The arithmetic means and the medians are represented by white diamonds and black bars, respectively. All boxplots fit within the late Miocene (11.6–5.3 Ma).](Figures/Figure_2.tiff)
+![Figure 2. Interquartile range boxplots for divergence estimates filtered by different fossil thresholds. The arithmetic means and the medians are represented by white diamonds and black bars, respectively. All boxplots fit within the late Miocene (11.6–5.3 Ma).](Figures/Figure_2.png)
 **Figure 2.** Interquartile range boxplots for divergence estimates filtered by different fossil thresholds. The arithmetic means and the medians are represented by white diamonds and black bars, respectively. All boxplots fit within the late Miocene (11.6–5.3 Ma).
 
-![Figure 3. Polynomial regression “full-dataset model” fitting the sample of Panini/Hominini split estimates by date of publication. Vertical dashed bars represent dates of publications of possible early hominins. A) Au. anamensis, Ar. ramidus; B) O. tugenensis, Ar. kadabba; C) S. tchadensis. The “Sahelanthropus-restricted model” linear regression in purple fits all data above the Sahelanthropus filter (7.2 Ma) and since its publication (2002). The late Miocene is within the horizontal dotted black bars.](Figures/Figure_3.tiff)
+![Figure 3. Polynomial regression “full-dataset model” fitting the sample of Panini/Hominini split estimates by date of publication. Vertical dashed bars represent dates of publications of possible early hominins. A) Au. anamensis, Ar. ramidus; B) O. tugenensis, Ar. kadabba; C) S. tchadensis. The “Sahelanthropus-restricted model” linear regression in purple fits all data above the Sahelanthropus filter (7.2 Ma) and since its publication (2002). The late Miocene is within the horizontal dotted black bars.](Figures/Figure_3.png)
 **Figure 3.** Polynomial regression “full-dataset model” fitting the sample of Panini/Hominini split estimates by date of publication. Vertical dashed bars represent dates of publications of possible early hominins. A) *Au. anamensis*, *Ar. ramidus*; B) *O. tugenensis*, *Ar. kadabba*; C) *S. tchadensis*. The “*Sahelanthropus*-restricted model” linear regression in purple fits all data above the Sahelanthropus filter (7.2 Ma) and since its publication (2002). The late Miocene is within the horizontal dotted black bars.
 
-![Figure 4. Polynomial regression with molecular estimates, excluding the first two decades and the studies in the shaded areas in red, orange and yellow (filtered-by-thresholds model). The linear regression in green (genomics-specific model) includes only the studies based on genomic data (without filtering).](Figures/Figure_4.tiff)
+![Figure 4. Polynomial regression with molecular estimates, excluding the first two decades and the studies in the shaded areas in red, orange and yellow (filtered-by-thresholds model). The linear regression in green (genomics-specific model) includes only the studies based on genomic data (without filtering).](Figures/Figure_4.png)
 **Figure 4.** Polynomial regression with molecular estimates, excluding the first two decades and the studies in the shaded areas in red, orange and yellow (filtered-by-thresholds model). The linear regression in green (genomics-specific model) includes only the studies based on genomic data (without filtering).
 
-![Figure 5. Forest plot depicting the specific effect size and sampled posterior distribution of each study after applying the 7.3 Ma threshold.](Figures/Figure_5_MetaBayes_FAD_C.tiff)
+![Figure 5. Forest plot depicting the specific effect size and sampled posterior distribution of each study after applying the 7.3 Ma threshold.](Figures/Figure_5_MetaBayes_FAD_C.png)
 **Figure 5.** Forest plot depicting the specific effect size and sampled posterior distribution of each study after applying the 7.3 Ma threshold.
 
-![Extended Data Fig. S1. Density curves for the min-estimate-max triplets sampled from the literature. Dashed vertical bars represent median values for each density curve. ](Figures/Figure_5_MetaBayes_FAD_C.tiff)
+![Extended Data Fig. S1. Density curves for the min-estimate-max triplets sampled from the literature. Dashed vertical bars represent median values for each density curve. ](Figures/Figure_5_MetaBayes_FAD_C.png)
 **Extended Data Fig. S1.** Density curves for the min-estimate-max triplets sampled from the literature. Dashed vertical bars represent median values for each density curve. 
 
 **S1. Dataset distribution**
