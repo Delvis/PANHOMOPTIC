@@ -43,7 +43,7 @@ The last analysis in present in the main text, and can be redundantly performed 
 ![Figure 5. Forest plot depicting the specific effect size and sampled posterior distribution of each study after applying the 7.3 Ma threshold.](Figures/Figure_5_MetaBayes_FAD_C.png)
 **Figure 5.** Forest plot depicting the specific effect size and sampled posterior distribution of each study after applying the 7.3 Ma threshold.
 
-![Extended Data Fig. S1. Density curves for the min-estimate-max triplets sampled from the literature. Dashed vertical bars represent median values for each density curve. ](Figures/Figure_5_MetaBayes_FAD_C.png)
+![Extended Data Fig. S1. Density curves for the min-estimate-max triplets sampled from the literature. Dashed vertical bars represent median values for each density curve. ](Figures/SF_1.png)
 **Extended Data Fig. S1.** Density curves for the min-estimate-max triplets sampled from the literature. Dashed vertical bars represent median values for each density curve. 
 
 **S1. Dataset distribution**
